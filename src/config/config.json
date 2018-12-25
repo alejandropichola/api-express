@@ -1,0 +1,28 @@
+{
+  "local": {
+    "dialect": "mysql",
+    "host": "localhost",
+    "database": "api_node",
+    "username": "root",
+    "password": "",
+    "user_env_variable": false,
+    "seederStorage": "sequelize",
+    "define": {
+      "charset": "utf8mb4",
+      "collate": "utf8mb4_unicode_ci"
+    },
+    "encrypt": {
+      "secret": "+yM!WM2^YpXyr?Ke3dJYyA5$=Q@95kq!"
+    },
+    "mail": {
+      "dialect": "smtp",
+      "host": "smtp.mailtrap.io",
+      "port": 2525,
+      "username": "30215d8e71a847",
+      "password": "91f43df2021c8b",
+      "secure": null,
+      "from": "noreply@mhfile.com",
+      "debug": true
+    }
+  }
+}

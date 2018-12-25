@@ -1,0 +1,126 @@
+{
+	"id": "715f1ce6-2c40-4712-8e0b-1541f958e17b",
+	"name": "api-node",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"f3b23676-9a71-4d86-83dd-4bdd4ecf42f2",
+		"04587a9f-f42b-4a53-a30e-36ec05bfb54d",
+		"85f76e90-87db-492b-a72c-98eaa7024d69",
+		"f7c57d53-e5d5-46b7-a31d-49ea43bbf921",
+		"be85800e-260f-42b9-b532-d761110f236b"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "04587a9f-f42b-4a53-a30e-36ec05bfb54d",
+			"name": "user",
+			"url": "http://localhost:3000/users",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"type\": \"user\",\n    \"attributes\": {\n    \t\"firstName\": \"maiver\",\n    \t\"lastName\": \"pichola\",\n    \t\"birthDate\": \"1997-03-03\",\n    \t\"email\": \"prueba@prueba.com\",\n    \t\"password\": \"secret\",\n    \t\"gender\": \"male\"\n    }\n  }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "85f76e90-87db-492b-a72c-98eaa7024d69",
+			"name": "user",
+			"url": "http://localhost:3000/users/93d544c3-310f-4749-8ef0-e27e562d287b",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n  \"data\": {\n    \"type\": \"user\",\n    \"attributes\": {\n    \t\"firstName\": \"maiver alejandro\",\n    \t\"lastName\": \"pichola\",\n    \t\"birthDate\": \"1997-03-03\",\n    \t\"email\": \"prueba@prueba.com\",\n    \t\"password\": \"secret\",\n    \t\"gender\": \"male\"\n    }\n  }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "be85800e-260f-42b9-b532-d761110f236b",
+			"name": "user",
+			"url": "http://localhost:3000/users/93d544c3-310f-4749-8ef0-e27e562d287b",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "f3b23676-9a71-4d86-83dd-4bdd4ecf42f2",
+			"name": "users",
+			"url": "http://localhost:3000/users",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "f7c57d53-e5d5-46b7-a31d-49ea43bbf921",
+			"name": "user",
+			"url": "http://localhost:3000/users/93d544c3-310f-4749-8ef0-e27e562d287b",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		}
+	]
+}

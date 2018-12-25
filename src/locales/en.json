@@ -1,0 +1,5 @@
+{
+	"JSON content-type required": "JSON content-type required",
+	"{{field}} is required": "{{field}} is required",
+	"{{field}} format is invalid": "{{field}} format is invalid"
+}

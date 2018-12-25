@@ -1,0 +1,7 @@
+.vscode
+.idea
+
+mode_modules/*
+**/mode_modules/*
+
+public/*

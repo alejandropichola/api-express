@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker-spanish",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    "eamodio.gitlens",
+    "joelday.docthis",
+    "attilabuti.vscode-mjml",
+    "digitalstreamio.mjml-syntax",
+    "PeterJausovec.vscode-docker"
+  ]
+}
