@@ -41,7 +41,8 @@ class User {
         'gender',
         'password',
         'birth_date',
-        'enabled'
+        'enabled',
+        'rolId'
       ]
     })
   }
@@ -55,7 +56,8 @@ class User {
         'email',
         'gender',
         'birth_date',
-        'enabled'
+        'enabled',
+        'rol'
       ],
       where: {
         id: userId
@@ -70,7 +72,8 @@ class User {
       email: self.email,
       gender: self.gender,
       password: self.password,
-      birthDate: self.birthDate
+      birthDate: self.birthDate,
+      rolId: self.rol
     })
   }
 
@@ -81,7 +84,8 @@ class User {
       email: self.email,
       gender: self.gender,
       password: self.password,
-      birthDate: self.birthDate
+      birthDate: self.birthDate,
+      rolId: self.rol
     }, {
       where: {
         id: self.userId
@@ -130,7 +134,7 @@ class User {
     const gender = user ? user.gender : 'M'
     const birthDate = user ? user.get('birth_date') : null
     const enabled = user ? user.enabled : true
-
+    const rol = user ? user.rolId : null
     const response = {
       type: 'users',
       userId: id,
@@ -140,7 +144,8 @@ class User {
         email: email,
         gender: gender,
         birthDate: birthDate,
-        enabled: enabled
+        enabled: enabled,
+        rol: rol
       },
       path: {
         self: `${path}users/${id}`
@@ -156,7 +161,8 @@ class User {
         firstName: self.firstName,
         lastName: self.lastName,
         gender: self.gender,
-        email: self.email
+        email: self.email,
+        rol: self.rol
       },
       path: {
         self: `${path}users`
@@ -174,7 +180,8 @@ class User {
         firstName: self.firstName,
         lastName: self.lastName,
         gender: self.gender,
-        email: self.email
+        email: self.email,
+        rol: self.rol
       },
       path: {
         self: `${path}users/${self.userId}`

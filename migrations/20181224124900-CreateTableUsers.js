@@ -8,6 +8,14 @@ module.exports = {
         primaryKey: true,
         defaultValue: Sequelize.UUIDV4
       },
+      rolId: {
+        type: Sequelize.INTEGER.UNSIGNED,
+        primaryKey: true,
+        references: {
+          model: 'rol',
+          key: 'id'
+        }
+      },
       email: {
         type: Sequelize.STRING,
         allowNull: false,

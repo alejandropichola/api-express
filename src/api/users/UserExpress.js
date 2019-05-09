@@ -17,6 +17,7 @@ class UserController extends BaseAuthController {
     this.lastName = ''
     this.email = ''
     this.gender = ''
+    this.rol = ''
     this.birthDate = null
     this.password = null
     this.users = []
@@ -93,6 +94,7 @@ class UserController extends BaseAuthController {
         this._getPassword()
         this._getGender()
         this._getBirthData()
+        this._getRol()
         if (this.errors.length > 0) {
           throw new BadParametersException(this.errors)
         }
@@ -119,6 +121,7 @@ class UserController extends BaseAuthController {
         this._getPassword()
         this._getGender()
         this._getBirthData()
+        this._getRol()
         if (this.errors.length > 0) {
           throw new BadParametersException(this.errors)
         }
@@ -190,6 +193,10 @@ class UserController extends BaseAuthController {
   _getPassword () {
     this.password = this.req.body.data.attributes.password || ''
     UsersValidator.validatePassword(this)
+  }
+
+  _getRol () {
+    this.rol = this.req.body.data.attributes.rol || ''
   }
 
   _getEmail () {

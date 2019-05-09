@@ -7,6 +7,15 @@ module.exports = function (sequelize, DataTypes) {
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4
       },
+      rolId: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        references: {
+          model: 'Rol',
+          Key: 'id'
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
+      },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -46,6 +55,11 @@ module.exports = function (sequelize, DataTypes) {
       tableName: 'users'
     }
   )
-
+  User.associate = function (models) {
+    this.belongsTo(models.Rol, {
+      foreignKey: 'rolId',
+      targetKey: 'id'
+    })
+  }
   return User
 }

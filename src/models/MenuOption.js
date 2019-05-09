@@ -1,16 +1,18 @@
 module.exports = function (sequelize, DataTypes) {
-  const Menu = sequelize.define(
-    'Menu',
+  const MenuOption = sequelize.define(
+    'MenuOption',
     {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true
       },
       nameComponent: {
+        field: 'name_component',
         type: DataTypes.STRING,
         allowNull: false
       },
       optionFather: {
+        field: 'option_father',
         type: DataTypes.INTEGER,
         allowNull: false
       },
@@ -19,10 +21,6 @@ module.exports = function (sequelize, DataTypes) {
       },
       icon: {
         type: DataTypes.STRING
-      },
-      permission: {
-        type: DataTypes.INTEGER,
-        allowNull: false
       },
       enabled: {
         type: DataTypes.BOOLEAN,
@@ -38,5 +36,5 @@ module.exports = function (sequelize, DataTypes) {
     }
   )
 
-  return Menu
+  return MenuOption
 }

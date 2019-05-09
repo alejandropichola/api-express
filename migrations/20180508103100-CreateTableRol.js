@@ -2,27 +2,15 @@
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    return queryInterface.createTable('menu', {
+    return queryInterface.createTable('rol', {
       id: {
         type: Sequelize.INTEGER.UNSIGNED,
-        autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
-      nameComponent: {
-        field: 'name_component',
+      name: {
         type: Sequelize.STRING,
         allowNull: false
-      },
-      optionFather: {
-        field: 'option_father',
-        type: Sequelize.INTEGER,
-        allowNull: false
-      },
-      description: {
-        type: Sequelize.STRING
-      },
-      icon: {
-        type: Sequelize.STRING
       },
       enabled: {
         type: Sequelize.BOOLEAN,
@@ -41,6 +29,6 @@ module.exports = {
   },
 
   down: function (queryInteface, Sequelize) {
-    return queryInteface.dropTable('menu')
+    return queryInteface.dropTable('rol')
   }
 }
