@@ -13,6 +13,7 @@ const ErrorController = require('api/errors/ErrorExpress')
 const RootController = require('api/root/RootExpress')
 const UserController = require('api/users/UserExpress')
 const MenuController = require('api/Menu/MenuExpress')
+const UploadController = require('api/upload/UploadExpress')
 const api = express()
 api.use(bodyParser.json({limit: '3mb'}))
 api.use(bodyParser.urlencoded({extended: true}))
@@ -51,6 +52,9 @@ api.delete('/users/:userId', (req, res, next) => {
 })
 api.get('/menu', (req, res, next) => {
   return new MenuController(api, req, res, next).getMenu()
+})
+api.post('/upload', (req, res, next) => {
+  return new UploadController(api, req, res, next).addUpload()
 })
 // route not found
 api.use((req, res, next) => {

@@ -6,7 +6,6 @@ const BadParametersException = require('../../exceptions/BadParametersException'
 class UserController extends BaseAuthController {
   constructor (api, req, res, next) {
     super(api, req, res, next)
-
     this._init()
     return this
   }
@@ -99,7 +98,7 @@ class UserController extends BaseAuthController {
           throw new BadParametersException(this.errors)
         }
       })
-      .catch(err => {
+      .catch((err) => {
         throw err
       })
   }
