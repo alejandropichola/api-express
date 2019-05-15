@@ -42,10 +42,12 @@ class UploadController extends BaseAuthController {
   }
 
   _definitionPdf () {
+    const mimeType = this.mimeType
+    const imageBase = mimeType + ',' + this.bodyImage
     const definition = {
       content: [
         {
-          image: this.mimeType + ',' + this.bodyImage
+          image: imageBase
         }
       ]
     }
@@ -98,10 +100,12 @@ class UploadController extends BaseAuthController {
 
   _getBodyImage () {
     this.bodyImage = this.req.body.data.attributes.bodyImage || ''
+    console.log(this.bodyImage)
   }
 
   _getMimeType () {
     this.mimeType = this.req.body.data.attributes.mimeType || ''
+    console.log(this.mimeType)
   }
 
   _response () {
