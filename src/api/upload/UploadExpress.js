@@ -47,7 +47,8 @@ class UploadController extends BaseAuthController {
     const definition = {
       content: [
         {
-          image: imageBase
+          image: imageBase,
+          width: 500
         }
       ]
     }
