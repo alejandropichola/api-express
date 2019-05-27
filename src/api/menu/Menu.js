@@ -39,7 +39,7 @@ class Menu {
     const response = {
       type: 'users',
       menuOption: id,
-      data: {
+      attributes: {
         nameComponent: nameComponent,
         optionFather: optionFather,
         description: description,

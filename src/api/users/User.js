@@ -138,7 +138,7 @@ class User {
     const response = {
       type: 'users',
       userId: id,
-      data: {
+      attributes: {
         firstName: firstName,
         lastName: lastName,
         email: email,
