@@ -66,4 +66,4 @@ api.use((err, req, res, next) => {
   return ErrorController.show(err, res)
 })
 // server
-api.listen(3000, '192.168.86.47', () => console.log('http://192.168.86.47:3000'))
+api.listen(3000, '192.168.1.13', () => console.log('http://192.168.1.13:3000'))

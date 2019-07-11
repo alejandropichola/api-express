@@ -42,7 +42,7 @@ class User {
         'password',
         'birth_date',
         'enabled',
-        'rolId'
+        'rol_id'
       ]
     })
   }
@@ -57,7 +57,7 @@ class User {
         'gender',
         'birth_date',
         'enabled',
-        'rol'
+        'rol_id'
       ],
       where: {
         id: userId
@@ -134,7 +134,7 @@ class User {
     const gender = user ? user.gender : 'M'
     const birthDate = user ? user.get('birth_date') : null
     const enabled = user ? user.enabled : true
-    const rol = user ? user.rolId : null
+    const rol = user ? user.get('rol_id') : null
     const response = {
       type: 'users',
       userId: id,

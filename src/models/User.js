@@ -8,6 +8,7 @@ module.exports = function (sequelize, DataTypes) {
         defaultValue: DataTypes.UUIDV4
       },
       rolId: {
+        field: 'rol_id',
         type: DataTypes.INTEGER.UNSIGNED,
         references: {
           model: 'Rol',
