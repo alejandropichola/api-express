@@ -39,7 +39,7 @@
     "morgan": "~1.9.0",
     "mysql2": "^1.6.5",
     "pdfmake": "^0.1.57",
-    "sequelize": "^5.9.4",
+    "sequelize": "^5.15.1",
     "soap": "^0.25.0",
     "uuid": "^3.3.2",
     "validator": "^10.11.0"
